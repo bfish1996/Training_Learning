@@ -1,41 +1,21 @@
-#import random
+mokedex = {"Beast Name": None, "Type": None, "Special Move": None, "HP": None, "MP": None}
 
-#counter = 0
+print("MokéBeast")
+print()
 
-#def Bingo ():
-  #for i in range(8):
-    #x = random.randint(1,90)
-    #return x
+for name, value in mokedex.items():
+  mokedex[name] = input(f"{name}:\t").strip().title()
 
-#card = [[Bingo(), Bingo(), Bingo()], [Bingo(), "BINGO", Bingo()], [Bingo(), Bingo(), Bingo()]]
+if mokedex["Type"]=="Earth":
+  print("\033[32m", end="")
+elif mokedex["Type"]=="Air":
+  print("\033[37m", end="")
+elif mokedex["Type"]=="Fire":
+  print("\033[31m", end="")
+elif mokedex["Type"]=="Water":
+  print("\033[34m", end="")
+else:
+  print("\033[33m", end="")
 
-#y = int(random.randint(0,2))
-#x = int(random.randint(0,2))
-#print(y, x)
-
-#print(card[y][x])
-
-import random
-
-bingo = []
-
-def ran():
-  number = random.randint(1,90)
-  return number
-
-def prettyPrint():
-  for row in bingo:
-    print(row)
-
-numbers = []
-for i in range(8):
-  numbers.append(ran())
-
-numbers.sort()
-
-bingo = [ [ numbers[0], numbers[1], numbers[2]],
-          [ numbers[3], "BINGO", numbers[4] ],
-          [ numbers [5], numbers[6], numbers[7]]
-        ]
-
-prettyPrint()
+for name, value in mokedex.items():
+  print(f"{name:<15}: {value}")
