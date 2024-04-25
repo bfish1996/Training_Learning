@@ -1,2 +1,2 @@
 import os
-os.system("python days/day47.py")
+os.system("python CS50/lecture6.py")
